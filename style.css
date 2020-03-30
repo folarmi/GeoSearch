@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+*:focus {
+    outline: none;
+}
+
+.main-wrapper{
+    line-height: 1.6;
+    overflow: hidden;
+    font-family:'Comic Neue', cursive;;
+}
+  
+.header h1{
+    margin-top: 1em;
+    text-align: center;
+    color: #3388ff;
+}
+
+.navbar{
+    margin: 1.5em;
+}
+
+#nav-bar{
+    margin-top: 4em;
+}
+
+.navbar__links{
+    margin-top: 4em;
+    margin-bottom: 5em;
+    height: 50px;
+    background-color: white;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.navbar__links a{
+    text-decoration: none;
+    color: 	#696969;
+    padding-left: 0.9em;
+}
+
+.active {
+    border-bottom: 3px solid #3388ff;
+    width: 4rem;
+}
+
+.banner{
+    margin: 1em;
+    margin-top: 3em;
+}
+
+.banner__header{
+    color: #696969;
+    padding-top: 10px;
+}
+
+.banner__para{
+    color: #696969;
+}
+
+.banner__img{
+    padding-right: 7em;
+}
+
+.banner__header__left{
+    text-align: right;
+    color: #696969;
+}
+
+.weather{
+    margin: 1em;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.weathers{
+    width: 5em;
+    height: 5em;
+    border-radius: 0.5em;
+}
+
+.weather__humidity{
+    background-color: #ffd040;
+}
+
+.weather__sunlight{
+    background-color: #5beaa5;
+}
+
+.weather__wind{
+    background-color: #3388ff;
+}
+
+.weather__pressure{
+    background-color: #8590aa;
+}
