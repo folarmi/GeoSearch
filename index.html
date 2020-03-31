@@ -21,7 +21,7 @@
 
             <div class="navbar__links" id="nav-bar">
                 <a href="#home">Map</a>
-                <a href="#weather">Weather</a>
+                <a href="#weather" id="show-weather">Weather</a>
                 <a href="#converter">Converter</a>
                 <a href="#notable">Notable Places</a>
             </div>
@@ -35,10 +35,10 @@
 
         <div id="weather">
             <div class="banner">
-                <h1 class="banner__header">Magboro</h1>
-                <p class="banner__para">March 29 | Cloudy Sunday</p>
+                <h1 class="banner__header" id="name-of-city"></h1>
+                <p class="banner__para" id="weather-des"></p>
                 <img src="./images/cloud.png" alt="" class="banner__img">
-                <h1 class="banner__header__left">75&#8451</h1>
+                <h1 class="banner__header__left" id="temperature"></h1>
             </div>
     
             <div class="weather">
@@ -46,25 +46,25 @@
                 <div class="weathers weather__humidity">
                     <img src="" alt="" class="weather__image">
                     <p class="weather__para">Humidity</p>
-                    <span class="weather__span">30%</span>
+                    <span class="weather__span" id="humidity"></span>
                 </div>
     
                 <div class="weathers weather__wind">
                     <img src="" alt="" class="weather__image">
                     <p class="weather__para">Wind</p>
-                    <span class="weather__span">5 mph</span>
+                    <span class="weather__span" id="wind-speed"></span>
                 </div>
     
                 <div class="weathers weather__pressure">
                     <img src="" alt="" class="weather__image">
                     <p class="weather__para">Pressure</p>
-                    <span class="weather__span">30%</span>
+                    <span class="weather__span" id="pressure"></span>
                 </div>
     
                 <div class="weathers weather__sunlight">
                     <img src="" alt="" class="weather__image">
-                    <p class="weather__para">Sunlight</p>
-                    <span class="weather__span">60</span>
+                    <p class="weather__para">Visibility</p>
+                    <span class="weather__span" id="visibility"></span>
                 </div>
     
             </div>

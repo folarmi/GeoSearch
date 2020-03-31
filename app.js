@@ -1,13 +1,11 @@
-// const allLinks = document.querySelectorAll('#nav-bar a');
-// for (var i = 0, length = allLinks.length; i < length; i++) {
-//   allLinks[i].onclick = function() {
-//     var currentPage = document.querySelector("#nav-bar li.active");
-//     if (currentPage) {
-//       currentPage.classList.remove("active");
-//       this.parentNode.classList.add('active');
-//   }
-//   };
-// }
+//QuerySelectors
+const humidityValue = document.getElementById('humidity');
+const windSpeedValue = document.getElementById('wind-speed');
+const pressureValue = document.getElementById('pressure');
+const visibilityValue = document.getElementById('visibility');
+const temperatureValue = document.getElementById('temperature');
+const weatherDescription = document.getElementById("weather-des")
+const nameOfCity = document.getElementById('name-of-city')
 
 // Google maps
 function initAutocomplete() {
@@ -75,4 +73,35 @@ function initAutocomplete() {
     });
     map.fitBounds(bounds);
   });
+}
+
+
+//Get Weather
+document.getElementById('show-weather').addEventListener('click', getWeather);
+
+function getWeather () {
+  const cityName = document.getElementById('pac-input').value;
+    var api = ' https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&APPID=78c41b3ef7b008eb035fd1e2cfa87696';
+
+    fetch(api)
+   .then((res) => res.json())
+   .then((data) => {
+      console.log(data)
+      var humidity = data.main.humidity;
+      var windSpeed = data.wind.speed;
+      var Temperature = data.main.temp; 
+      var weather = data.weather[0].description;
+      var visibility = data.visibility;
+      var pressure = data.main.pressure;
+      var name = data.name;
+
+      // Posts to the DOM
+      nameOfCity.innerHTML = name;
+      humidityValue.innerHTML = humidity;
+      windSpeed.innerHTML = windSpeed + "km/hr";
+      pressureValue.innerHTML = pressure;
+      visibilityValue.innerHTML = visibility;
+      temperatureValue.innerHTML = Temperature + "&#8451";
+      weatherDescription.innerHTML = "March 31 | " + weather;
+})
 }
