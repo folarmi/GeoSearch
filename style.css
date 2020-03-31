@@ -14,8 +14,8 @@
     font-family:'Comic Neue', cursive;
 }
 
-#home{
-    padding-top: 2em;
+.map{
+    padding-top: 1em;
 }
   
 .header h1{
@@ -218,7 +218,7 @@ Map Styling */
   
 .pac-controls {
     display: inline-block;
-    padding: 5px 11px;
+    /* padding: 5px 11px; */
 }
   
 .pac-controls label {
@@ -234,10 +234,15 @@ Map Styling */
     font-size: 15px;
     font-weight: 300;
     margin-left: 8px;
-    /* padding: 0 11px 0 13px; */
+    padding: 0 11px 0 13px;
     text-overflow: ellipsis;
     width: 250px;
     height: 30px; 
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    margin-top: 5em;
+    margin-left: -13.5em;
 }
   
 #pac-input:focus {
