@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geo Search</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,19 +14,97 @@
         <nav>
             <div class="nav-bar">
                 
-                <div class="main-header">
+                <div class="main-header" id="home">
 
                     <div class="header"><h1>Geo Search</h1></div>
             </div>
 
             <div class="navbar__links" id="nav-bar">
-                <a href="./index.html" class="active">Map</a>
-                <a href="./weather.html">Weather</a>
-                <a href="./converter.html">Converter</a>
-                <a href="./notable.html">Notable Places</a>
+                <a href="#home">Map</a>
+                <a href="#weather">Weather</a>
+                <a href="#converter">Converter</a>
+                <a href="#notable">Notable Places</a>
             </div>
         </nav>
 
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map"></div>
+
+        <div id="weather">
+            <div class="banner">
+                <h1 class="banner__header">Magboro</h1>
+                <p class="banner__para">March 29 | Cloudy Sunday</p>
+                <img src="./images/cloud.png" alt="" class="banner__img">
+                <h1 class="banner__header__left">75&#8451</h1>
+            </div>
+    
+            <div class="weather">
+    
+                <div class="weathers weather__humidity">
+                    <img src="" alt="" class="weather__image">
+                    <p class="weather__para">Humidity</p>
+                    <span class="weather__span">30%</span>
+                </div>
+    
+                <div class="weathers weather__wind">
+                    <img src="" alt="" class="weather__image">
+                    <p class="weather__para">Wind</p>
+                    <span class="weather__span">5 mph</span>
+                </div>
+    
+                <div class="weathers weather__pressure">
+                    <img src="" alt="" class="weather__image">
+                    <p class="weather__para">Pressure</p>
+                    <span class="weather__span">30%</span>
+                </div>
+    
+                <div class="weathers weather__sunlight">
+                    <img src="" alt="" class="weather__image">
+                    <p class="weather__para">Sunlight</p>
+                    <span class="weather__span">60</span>
+                </div>
+    
+            </div>
+    
+        </div>
+
+        <div id="converter">
+
+            <div class="mini-wrapper">
+
+                <div class="converter">
+                    <p class="converter__header">Temperature</p>
+                </div>
+        
+                <div class="calc-display">
+                    <div class="display-1"><h1>78</h1></div>
+                    <p id="degree">&#8451</p>
+                    <div class="display-2">78<span>&#8451</span></div>
+                </div>
+        
+                <div class="calc-number">
+                    <div class="number">1</div>
+                    <div class="number">2</div>
+                    <div class="number">3</div>
+                    <div class="number">-</div>
+                    <div class="number">4</div>
+                    <div class="number">5</div>
+                    <div class="number">6</div>
+                    <div class="number">0</div>
+                    <div class="number">7</div>
+                    <div class="number">8</div>
+                    <div class="number">9</div>
+                    <div class="number">.</div>
+                </div>
+        
+            </div>
+
+            <div id="notable">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus soluta voluptate ex quasi? Asperiores, exercitationem quisquam ut nam et quasi eligendi veniam ducimus, neque distinctio a quibusdam. Nisi quo voluptatibus distinctio totam consequatur nesciunt. Reiciendis eius, ut vel eaque aperiam facere omnis, aliquid similique sed, soluta dolore nemo suscipit aspernatur magnam et rerum quo esse nihil nam quasi deserunt nobis quisquam. Aspernatur consequatur reprehenderit et nulla similique veniam voluptate sint ratione molestias sed est qui pariatur hic aliquam, ea in, ad maiores, quisquam unde culpa. Maiores alias, rerum labore repudiandae a itaque eius odio provident aliquid! Sed quod quibusdam quam praesentium vitae sapiente architecto minima eos tenetur, ullam amet, illum eligendi harum similique, officiis sequi magnam delectus vel soluta possimus cum suscipit veniam! Corporis officiis repellat commodi dignissimos dolorem eaque eveniet, facilis repellendus sint assumenda architecto iusto omnis. Rem, error. Repellendus exercitationem corporis neque nulla reprehenderit maxime accusamus soluta pariatur, repellat, tenetur sint corrupti modi eveniet minima? Assumenda omnis asperiores accusamus fugiat expedita nobis vitae dolorem vero voluptates ut culpa a odio ratione esse dolore, quae optio laborum totam? Cupiditate fugit quos culpa sequi omnis aliquid qui iure error labore illo nemo vel minus quod voluptatem ipsum doloremque, optio nam! Possimus voluptas eveniet nisi pariatur aspernatur atque quo culpa, explicabo cumque accusamus deleniti dicta, sed qui numquam non illo deserunt eius sequi quis reprehenderit, distinctio commodi exercitationem eos asperiores! Eos, porro nisi quam debitis in ea placeat maiores id eum repellat quis omnis totam commodi, ad magnam. Beatae tenetur officiis voluptatum aliquam unde ut ea, quis dicta iste eveniet saepe vel libero, asperiores odio impedit labore ipsam, dolorum quaerat porro voluptate provident nam. Natus, delectus ipsum. Assumenda, ex voluptas quis rerum ratione ipsum pariatur explicabo eos quae corporis tenetur sit inventore aliquid distinctio, facere et nostrum doloremque veniam eligendi exercitationem!
+            </div>
+        </div>
+
     <script src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKrsTZlN-C-eEq1D8nEwtSDnDd9xtknkI&libraries=places&callback=initAutocomplete"></script>
 </body>
 </html>
