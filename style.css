@@ -67,13 +67,16 @@
     color: #696969;
 }
 
-.banner__img{
-    padding-right: 7em;
-}
 
 .banner__header__left{
     text-align: right;
     color: #696969;
+}
+
+#banner-img{
+    width: 15em;
+    height: 5em;
+    padding-left: 12em;
 }
 
 .weather{
@@ -264,4 +267,11 @@ Map Styling */
 Notable places */
 #notable{
     padding-top: 8em;
+}
+
+.image img{
+    height: 400px;
+    width: 400px;
+    margin-left: 1em;
+    margin-right: 1em;
 }

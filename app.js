@@ -2,10 +2,11 @@
 const humidityValue = document.getElementById('humidity');
 const windSpeedValue = document.getElementById('wind-speed');
 const pressureValue = document.getElementById('pressure');
-const visibilityValue = document.getElementById('visibility');
+const maxTempValue = document.getElementById('max-temp');
 const temperatureValue = document.getElementById('temperature');
 const weatherDescription = document.getElementById("weather-des")
 const nameOfCity = document.getElementById('name-of-city')
+const weatherImage = document.getElementById('banner-img')
 
 // Google maps
 function initAutocomplete() {
@@ -44,6 +45,7 @@ function initAutocomplete() {
     // For each place, get the icon, name and location.
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function(place) {
+      // console.log(place.photos[1][0])
       if (!place.geometry) {
         console.log("Returned place contains no geometry");
         return;
@@ -63,9 +65,11 @@ function initAutocomplete() {
         title: place.name,
         position: place.geometry.location
       }));
+      
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
+        console.log(place)
         bounds.union(place.geometry.viewport);
       } else {
         bounds.extend(place.geometry.location);
@@ -86,22 +90,30 @@ function getWeather () {
     fetch(api)
    .then((res) => res.json())
    .then((data) => {
-      console.log(data)
       var humidity = data.main.humidity;
       var windSpeed = data.wind.speed;
-      var Temperature = data.main.temp; 
+      var Temperature = Math.round(data.main.temp - 273.15); 
       var weather = data.weather[0].description;
-      var visibility = data.visibility;
+      var maxTemp= Math.round(data.main.temp_max - 273.15)
       var pressure = data.main.pressure;
       var name = data.name;
+      var iconCode = data.weather[0].icon;
+      var iconurl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+
+      //To get Date in Js
+      var date = new Date();
+      var currentDay = date.getDate();
+      var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      var currentMonth = months[date.getMonth()];
 
       // Posts to the DOM
       nameOfCity.innerHTML = name;
       humidityValue.innerHTML = humidity;
-      windSpeed.innerHTML = windSpeed + "km/hr";
+      windSpeedValue.innerHTML = windSpeed + "km/hr";
       pressureValue.innerHTML = pressure;
-      visibilityValue.innerHTML = visibility;
+      maxTempValue.innerHTML = maxTemp;
       temperatureValue.innerHTML = Temperature + "&#8451";
-      weatherDescription.innerHTML = "March 31 | " + weather;
+      weatherDescription.innerHTML = currentMonth +  " " + currentDay + " | " + weather;
+      weatherImage.setAttribute('src',iconurl)
 })
 }
