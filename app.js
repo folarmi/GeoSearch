@@ -87,7 +87,7 @@ function initAutocomplete() {
               nameOfCity.innerHTML = name;
               humidityValue.innerHTML = humidity + '%';
               windSpeedValue.innerHTML = windSpeed + "km/hr";
-              pressureValue.innerHTML = pressure;
+              pressureValue.innerHTML = pressure + "Pa";
               maxTempValue.innerHTML = maxTemp + "&#8451" ;
               temperatureValue.innerHTML = Temperature + "&#8451";
               weatherDescription.innerHTML = currentMonth +  " " + currentDay + " | " + weather;
