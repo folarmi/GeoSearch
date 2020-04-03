@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geo Search</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/014a14165b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main-wrapper">
@@ -22,8 +21,6 @@
             <div class="navbar__links" id="nav-bar">
                 <a href="#home">Map</a>
                 <a href="#weather" id="show-weather">Weather</a>
-                <a href="#converter">Converter</a>
-                <a href="#notable">Notable Places</a>
             </div>
         </nav>
 
@@ -35,111 +32,38 @@
 
         <div id="weather">
             <div class="banner">
-                <h1 class="banner__header" id="name-of-city"></h1>
-                <p class="banner__para" id="weather-des"></p>
+                <h1 class="banner__header" id="name-of-city">Magboro</h1>
+                <p class="banner__para" id="weather-des">April 2 | Clear Skies</p>
                 <img src="" alt="" class="banner__img" id="banner-img">
-                <h1 class="banner__header__left" id="temperature"></h1>
+                <h1 class="banner__header__left" id="temperature">30&#8451</h1>
             </div>
     
             <div class="weather">
     
                 <div class="weathers weather__humidity">
-                    <img src="" alt="" class="weather__image">
+                    <img src="https://img.icons8.com/wired/64/000000/humidity.png" class="icon8"/>
                     <p class="weather__para">Humidity</p>
-                    <span class="weather__span" id="humidity"></span>
+                    <span class="weather__span" id="humidity">0</span>
                 </div>
     
                 <div class="weathers weather__wind">
-                    <img src="" alt="" class="weather__image">
+                    <span><i class="fas fa-wind"></i></span>
                     <p class="weather__para">Wind</p>
-                    <span class="weather__span" id="wind-speed"></span>
+                    <span class="weather__span" id="wind-speed">0</span>
                 </div>
     
                 <div class="weathers weather__pressure">
-                    <img src="" alt="" class="weather__image">
+                    <img src="https://img.icons8.com/dusk/64/000000/pressure.png" alt="" class="icon8">
                     <p class="weather__para">Pressure</p>
-                    <span class="weather__span" id="pressure"></span>
+                    <span class="weather__span" id="pressure">0</span>
                 </div>
     
                 <div class="weathers weather__sunlight">
-                    <img src="" alt="" class="weather__image">
+                    <span><i class="fas fa-temperature-high"></i></span>
                     <p class="weather__para">Max temp</p>
-                    <span class="weather__span" id="max-temp"></span>
+                    <span class="weather__span" id="max-temp">0</span>
                 </div>
     
-            </div>
-    
-        </div>
-
-        <div id="converter">
-
-            <div class="mini-wrapper">
-
-                <div class="converter">
-                    <p class="converter__header">Temperature</p>
-                </div>
-        
-                <div class="calc-display">
-                    <div class="display-1"><h1>78</h1></div>
-                    <p id="degree">&#8451</p>
-                    <div class="display-2">78<span>&#8451</span></div>
-                </div>
-        
-                <div class="calc-number">
-                    <div class="number">1</div>
-                    <div class="number">2</div>
-                    <div class="number">3</div>
-                    <div class="number">-</div>
-                    <div class="number">4</div>
-                    <div class="number">5</div>
-                    <div class="number">6</div>
-                    <div class="number">0</div>
-                    <div class="number">7</div>
-                    <div class="number">8</div>
-                    <div class="number">9</div>
-                    <div class="number">.</div>
-                </div>
-        
-            </div>
-
-            <div id="notable">
-                
-                <div class="images">
-
-                    <div class="image">  
-                        <img src="" alt="">
-                        
-                    </div>
-
-                    <div class="image">
-                        <img src="images/rose.jpg" alt="">
-                        
-                    </div>
-
-                    <div class="image">
-                        <img src="images/rose.jpg" alt="">
-                        
-                    </div>
-
-                    <div class="image">
-                        <img src="images/rose.jpg" alt="">
-                        
-                    </div>
-                    
-                    <div class="image">
-                        <img src="images/rose.jpg" alt="">
-                        
-                    </div>
-
-                    <div class="image">
-                        <img src="images/rose.jpg" alt="">  
-                    </div>
-
-                    <div class="image">
-                    <img src="images/rose.jpg" alt="">
-                </div>
-
-                </div>
             </div>
         </div>
 
