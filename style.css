@@ -11,7 +11,7 @@
 .main-wrapper{
     line-height: 1.6;
     overflow: hidden;
-    font-family:'Comic Neue', cursive;
+    font-family: 'Dancing Script', cursive;;
 }
 
 .map{
@@ -140,7 +140,7 @@ Map Styling */
 }
 
 #description {
-    font-family: 'Comic Neue', cursive;
+    font-family: 'Dancing Script', cursive;
     font-size: 15px;
     font-weight: 300;
 }
@@ -179,7 +179,7 @@ Map Styling */
 }
   
 .pac-controls label {
-    font-family: 'Comic Neue', cursive;
+    font-family: 'Dancing Script', cursive;
     font-size: 13px;
     font-weight: 300;
 }
@@ -187,7 +187,7 @@ Map Styling */
 #pac-input {
     /* margin-top: 4em; */
     background-color: #fff;
-    font-family: 'Comic Neue', cursive;
+    font-family: 'Dancing Script', cursive;
     font-size: 15px;
     font-weight: 300;
     margin-left: 8px;
