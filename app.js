@@ -7,7 +7,50 @@ const temperatureValue = document.getElementById('temperature');
 const weatherDescription = document.getElementById("weather-des")
 const nameOfCity = document.getElementById('name-of-city')
 const weatherImage = document.getElementById('banner-img')
+var currentLatitude = 0; 
+var currentLongitude = 0;
 
+
+//Geolocation
+// document.addEventListener('DOMContentLoaded', showPosition , false);
+
+// function showPosition() {
+
+//   if(navigator.geolocation) {
+//       navigator.geolocation.getCurrentPosition(showMap);
+
+//   } else {
+//       alert("Sorry, your browser does not support HTML5 geolocation.");
+      
+//   }
+// }
+
+// // Define callback function for successful attempt
+// function showMap(position) {
+//   // Get location data
+//   lat = position.coords.latitude;
+//   long = position.coords.longitude;
+//   var latlong = new google.maps.LatLng(lat, long);
+
+//   console.log(lat,long)
+  
+//   var myOptions = {
+//       center: latlong,
+//       zoom: 16,
+//       mapTypeControl: true,
+//       navigationControlOptions: {
+//           style:google.maps.NavigationControlStyle.SMALL
+//       }
+//   }
+  
+//   var map = new google.maps.Map(document.getElementById("map"), myOptions);
+//   var marker = new google.maps.Marker({ position:latlong, map:map, title:"You are here!" });
+// }
+
+// 6.7189° N, 3.4019° E
+// 6.5601536 3.3325056
+
+    
 // Google maps
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -15,6 +58,7 @@ function initAutocomplete() {
     zoom: 13,
     mapTypeId: 'roadmap'
   });
+
 
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');

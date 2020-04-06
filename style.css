@@ -28,17 +28,9 @@
     margin: 1.5em;
 }
 
-#nav-bar{
-    margin-top: 4em;
-}
-
 .navbar__links{
-    margin-top: 4em;
-    margin-bottom: 5em;
     height: 50px;
     background-color: white;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
 }
 
@@ -48,10 +40,6 @@
     padding-left: 1em;
 }
 
-.active {
-    border-bottom: 3px solid #3388ff;
-    width: 4rem;
-}
 
 .banner{
     margin: 1em;
@@ -60,7 +48,7 @@
 
 .banner__header{
     color: #696969;
-    padding-top: 4em;
+    /* padding-top: 4em; */
 }
 
 .banner__para{
@@ -87,7 +75,7 @@
     justify-content: space-around;
     border-radius: 5px;
     text-align: center;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
 
 .weathers{
@@ -126,8 +114,8 @@ Map Styling */
  * element that contains the map. */
 
 #map {
-    margin-top: 3em;
-    height: 40em;
+    margin-top:1em;
+    height: 20em;
     margin-left: 1em;
     margin-right: 1em;
 }
@@ -231,7 +219,6 @@ Map Styling */
     }
 
     .weather__para{
-        /* padding-top: 2em; */
         font-size: 2em;
     }
 
