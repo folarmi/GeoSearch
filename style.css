@@ -11,7 +11,17 @@
 .main-wrapper{
     line-height: 1.6;
     overflow: hidden;
-    font-family: 'Dancing Script', cursive;;
+    font-family: 'Dancing Script', cursive;
+}
+
+button{
+    margin-left: 18em;
+    width: 7em;
+    border: none;
+    padding: 0.7rem;
+    color: white;
+    background-color: #3388ff ;
+    font-family: 'Dancing Script', cursive;
 }
 
 .map{
@@ -19,6 +29,7 @@
 }
   
 .header h1{
+    font-size: 2em;
     margin-top: 1em;
     text-align: center;
     color: #3388ff;
@@ -114,7 +125,7 @@ Map Styling */
  * element that contains the map. */
 
 #map {
-    margin-top:1em;
+    /* margin-top:1em; */
     height: 20em;
     margin-left: 1em;
     margin-right: 1em;
@@ -208,10 +219,38 @@ Map Styling */
 
 
 @media only screen and (min-width:961px){
+    .mini-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+    #map {
+        /* margin-top:1em; */
+        height: 45em;
+        margin-top: 0;
+        margin-left: 2em;
+        margin-right: 1em;
+        width: 40em;
+        
+    }
+    
+    button{
+        margin-left: 50em;
+        font-size: 1.5em;
+    }
+
+    .weather{
+        margin-top: 0em;
+        justify-content: space-between;
+    }
+
     .weathers{
-        width: 15em;
+        flex: 0 0 44%;
+        width: 10em;
         height: 15em;
         border-radius: 0.5em;
+        margin-top: 3em
     }
 
     .weather__span{

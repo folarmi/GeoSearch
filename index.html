@@ -20,11 +20,11 @@
             </div>
 
             <div class="navbar__links" id="nav-bar">
-                <a href="#home">Map</a>
-                <a href="#weather" id="show-weather">Weather</a>
+                <button type="submit" id="show-weather"  onclick="window.location.href = '#weather'">Get Weather</button>
             </div>
         </nav>
-
+       
+        <div class="mini-wrapper">
         <div class="map">
 
                 <input id="pac-input" class="controls" type="text" placeholder="Search Box">
@@ -66,6 +66,7 @@
                 </div>
     
             </div>
+        </div>
         </div>
 
     <script src="app.js"></script>

@@ -104,7 +104,9 @@ function initAutocomplete() {
       // Get Weather
       document.getElementById('show-weather').addEventListener('click', getWeather);
 
-      function getWeather () {
+      function getWeather (event) {
+        event.preventDefault()
+        console.log('works')
       var api = ' https://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&APPID=78c41b3ef7b008eb035fd1e2cfa87696';
 
 
