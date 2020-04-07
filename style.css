@@ -186,6 +186,7 @@ Map Styling */
 }
   
 #pac-input {
+    font-weight: bolder;
     color: black;
     background-color: #fff;
    font-family: 'Fira Sans', sans-serif;
